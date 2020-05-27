@@ -43,6 +43,5 @@ int main(int argc, char *argv[])
 		printf("单词数：%d\n", num1);
 	else
 		printf("输入参数不合法！\n");
-	}
 	return 0;
 }
