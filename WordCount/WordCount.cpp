@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
 		int num1 = 1;
 		char temp1 = fgetc(file);
 		while (temp1 != EOF) {           
-			if (temp1 == ' ' || temp1 == ',') {					//由空格或逗号分割开的都视为单词
-				while (temp1 == ' ' || temp1 == ',') {
+			if (temp1 == ' ' || temp1 == ',' || temp1 == '\n') {					//由空格或逗号分割开的都视为单词
+				while (temp1 == ' ' || temp1 == ',' || temp1 == '\n') {
 					temp1 = fgetc(file);
 				}
 				num1++;
@@ -41,6 +41,8 @@ int main(int argc, char *argv[])
 
 		}
 		printf("单词数：%d\n", num1);
+	else
+		printf("输入参数不合法！\n");
 	}
 	return 0;
 }
